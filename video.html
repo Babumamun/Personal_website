@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Video page</title>
+		 <link rel="stylesheet" href="css/video.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>HERE ARE SOME OF MY FAVOURITE SONGS</h1>
+			<div class="row">
+				<div class="col">
+					<div class="feature-img">
+						<img src="img/pic1.png" width="100%" />
+						<img src="img/play.png" class="play-btn"
+						 onclick="PlayVideo('videos/video2.mp4')"/>
+						
+					</div>
+				</div>
+				<div class="col">
+					<div class="small-img-row">
+						<div class="small-img">
+							<img src="img/pic2.png" />
+							<img src="img/play.png" class="play-btn"
+							 onclick="PlayVideo('videos/video5.mp4')"/>
+						</div>
+						<p>Worry About Me" is a song by English singer Ellie Goulding.. </p>
+					</div>
+					<div class="small-img-row">
+						<div class="small-img">
+							<img src="img/pic3.png" />
+							<img src="img/play.png" class="play-btn"
+							 onclick="PlayVideo('videos/video3.mp4')"/>
+						</div>
+						<p>Halsey - Without you Turn on notifications to stay updated.. </p>
+					</div>
+					<div class="small-img-row">
+						<div class="small-img">
+							<img src="img/pic4.png" />
+							<img src="img/play.png" class="play-btn" 
+							onclick="PlayVideo('videos/video4.mp4')"/>
+						</div>
+						<p>  Hear Me Calling Lyrics. [Intro] Ring, do you hear me calling? Purps On.. </p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="video-player" id="videoPlayer">
+			<video width="100%" controls autoplay id="myVideo">
+				<source src="videos/video2.mp4"
+				type="video/mp4">	
+			</video>
+			<img src="img/close.png" class="close-btn" onclick="stopVideo()"/>
+		</div>
+		
+		<script>
+		var videoPlayer=document.getElementById("videoPlayer");
+		var myVideo=document.getElementById("myVideo");	
+			
+		function stopVideo(){
+			videoPlayer.style.display="none"
+		}
+			
+		
+		function PlayVideo(file){
+			myVideo.src=file;
+			videoPlayer.style.display="block";
+		}
+		
+		
+		</script>
+		
+	</body>
+</html>
